@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Javascript Execution Sequence IN object style. if html executes first then js in second then js will work. But if js execution is completely done and then html in socnd then output will not reflected</h1>
+
+
+<h3 id="demot">Demo</h3> <!-- Output: Monzur is 39 years old. -->
+	<script>
+		
+		const person = 
+			{
+				firstname:"Monzur",
+				lastname:"Rahman",
+				age:39,
+				eyecolor:"Black"
+			};
+		document.getElementById("demot").innerHTML= 
+		person.firstname + " is "+ person.age +" years old.";
+	
+	</script>
+	
+<h3 id="demot">Demo</h3> <!-- Output: Demo -->
+
+
+</body>
+</html>
