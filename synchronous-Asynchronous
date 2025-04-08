@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>This is JS playground</title>
+	<link rel="stylesheet" href="">
+	<script type='text/javascript'>
+		function onTouch(){
+			// document.getElementById("second_heading").innerHTML="Hello";
+			console.log("Task-1");
+			console.log("Task-2");
+			console.log("Task-3");
+			// JS is by default synchronous. It goes to second task after execution the first task. If first task is not executed then the rest of the tasks will not be initiated. 
+			// Asynchronous starts here. All tasks starts parallelly. If any tasks delays to start then next tassk will be executed 
+			const dataLoading=()=>{
+				console.log("Second Tasks. Asynchronous works here.");
+			};
+
+			const taskOne = () => {
+				console.log("First task completed to test asynchronous");
+				}
+			const taskTwo = () => {
+				setTimeout(dataLoading, 2000);
+				} 
+			const taskThree = () => {
+				console.log("Third task completed to test asynchronous");
+				}
+
+			taskOne();
+			taskTwo();
+			taskThree();
+
+		}
+		
+
+	</script>
+ <script type="javascript"></script>
+</head>
+<body>
+		<button onclick="onTouch()">Click</button>
+</body>
+</html>
